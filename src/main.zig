@@ -29,12 +29,12 @@ pub fn main() !void {
     while (true) {
         const input = try Input.parse.readOneInput(stdin_file.reader());
 
-        try input.print(stdout);
-
         switch (input.input_type) {
             .release => continue,
             else => {},
         }
+
+        try input.print(stdout);
 
         try stdout.print("\t{s}   \tchord: '", .{@tagName(input.input_type)});
 
@@ -88,7 +88,6 @@ var global_term_manager: ?*TermManager = null;
 const termi = @import("termi");
 const Input = termi.Input;
 const chars = termi.chars;
-const CSI = chars.CSI;
 const ProgressiveEnhancement = termi.ProgressiveEnhancement;
 const TermManager = termi.TermManager;
 
