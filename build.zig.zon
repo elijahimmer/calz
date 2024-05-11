@@ -6,8 +6,8 @@
 
     .dependencies = .{
         .termi = .{
-            .url = "../termi",
-            .hash = "1220931da8eb432eaa46681eb00430c45fd9b8219094e837a999abced9328f6d2cc2",
+            .url = "git+https://github.com/elijahimmer/termi/#HEAD",
+            .hash = "12200705de3978937a935e5c9917061939f26c168fb77e176b658c6ed93e2d415877",
         },
     },
     .paths = .{
